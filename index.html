@@ -72,7 +72,7 @@
     <article id="post-第一周学习内容" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/2024/09/21/%E7%AC%AC%E4%B8%80%E5%91%A8%E5%AD%A6%E4%B9%A0%E5%86%85%E5%AE%B9/" class="article-date">
-  <time class="dt-published" datetime="2024-09-21T11:34:31.000Z" itemprop="datePublished">2024-09-21</time>
+  <time class="dt-published" datetime="2024-09-21T11:27:56.000Z" itemprop="datePublished">2024-09-21</time>
 </a>
     
   </div>
@@ -91,228 +91,14 @@
     
     <div class="e-content article-entry" itemprop="articleBody">
       
-        <h2 id="理解Bp的原理"><a href="#理解Bp的原理" class="headerlink" title="理解Bp的原理"></a>理解Bp的原理</h2><p>Bp通过拦截和修改 HTTP&#x2F;HTTPS 请求和响应来进行漏洞扫描、渗透测试和安全评估</p>
-<p>BurpSuite截取客户端发送给服务器的请求，然后伪装成客户端与服务器进行通信</p>
-<p><img src="/./../images/_posts/%E7%AC%AC%E4%B8%80%E5%91%A8%E5%AD%A6%E4%B9%A0%E5%86%85%E5%AE%B9/image-20240921193704564.png" alt="image-20240921193704564"></p>
-<h2 id="学习Linux常见命令"><a href="#学习Linux常见命令" class="headerlink" title="学习Linux常见命令"></a>学习Linux常见命令</h2><h4 id="笔记："><a href="#笔记：" class="headerlink" title="笔记："></a>笔记：</h4><p><strong>shell</strong>: 用来执行命令行的命令</p>
-<p>bash是shell（终端）的一种</p>
-<p>shell 黑色的框框 最上面有一行命令行提示符</p>
-<p>写命令：带着参数执行程序</p>
-<p>什么是<strong>环境变量?它有何作用？</strong></p>
-<blockquote>
-<p>环境变量是操作系统中用来设置运行环境的参数，它们可以影响到系统和应用程序的行为。环境变量可以在操作系统启动时设置，也可以在运行时通过命令行或应用程序设置。环境变量通常在操作系统中具有特定的名称和值，并包含一个或多个应用程序所需的信息，可以提高程序的运行效率和管理系统资源的能力。</p>
-</blockquote>
-<p><img src="/./../images/_posts/%E7%AC%AC%E4%B8%80%E5%91%A8%E5%AD%A6%E4%B9%A0%E5%86%85%E5%AE%B9/image-20240921193724761.png" alt="image-20240921193724761"></p>
-<p>这是自带的一个程序，which用来查看echo这个程序在哪里</p>
-<p><strong>路径</strong>：描述计算机内文件的存储位置——起点在根目录，后面跟着一连串的斜杠（windows用反斜杠分隔）windows有很多个硬盘，每个硬盘都有一套独立的文件目录，但是在MacOs和Linux中，所有文件都在一个根目录下。</p>
-<p><strong>绝对路径</strong>：绝对准确确定一个文件的位置</p>
-<p><strong>相对路径</strong>：相对于当前的工作目录的<img src="/./../images/_posts/%E7%AC%AC%E4%B8%80%E5%91%A8%E5%AD%A6%E4%B9%A0%E5%86%85%E5%AE%B9/81786d1dd22eca610591f5e855843601.png" alt="81786d1dd22eca610591f5e855843601"></p>
-<p>查询当前工作目录是什么—&gt;**<code>pwd</code>**：print working directory</p>
-<p><img src="/./../images/_posts/%E7%AC%AC%E4%B8%80%E5%91%A8%E5%AD%A6%E4%B9%A0%E5%86%85%E5%AE%B9/6a4012431a90a6a1fce3bbd1e57a8b8c.png" alt="6a4012431a90a6a1fce3bbd1e57a8b8c"></p>
-<p>查看根目录下都有哪些路径：路径之间以冒号隔开</p>
-<p><img src="/./../images/_posts/%E7%AC%AC%E4%B8%80%E5%91%A8%E5%AD%A6%E4%B9%A0%E5%86%85%E5%AE%B9/7fa56b966bdc40c439f000f0ffdcd1ee.png" alt="7fa56b966bdc40c439f000f0ffdcd1ee"></p>
-<p>将工作目录改变—&gt;<code>cd </code>(change directory)</p>
-<p>再用<code>pwd</code>看看当前工作目录是什么，发现变了，还发现shell的提示也变了</p>
-<p><strong><code>..</code></strong>  两个点点  上层目录<img src="/./../images/_posts/%E7%AC%AC%E4%B8%80%E5%91%A8%E5%AD%A6%E4%B9%A0%E5%86%85%E5%AE%B9/c7be6dcfc77dc28a2ecaf70de93596ec.png" alt="c7be6dcfc77dc28a2ecaf70de93596ec"></p>
-<p>工作目录变为上层工作目录</p>
-<p><strong><code>.</code></strong> 一个点点 本层目录<img src="/./../images/_posts/%E7%AC%AC%E4%B8%80%E5%91%A8%E5%AD%A6%E4%B9%A0%E5%86%85%E5%AE%B9/3a302d0d9563ba2991d85870bb8ec266.png" alt="3a302d0d9563ba2991d85870bb8ec266"></p>
-<p>工作目录改为&#x2F;local下的&#x2F;home</p>
-<p>调用程序的时候最好写<strong>绝对路径</strong>，这样无论工作目录是什么都能跑的起来</p>
-<p><code>ls</code>：显示当前目录下的所有文件</p>
-<p><img src="/./../images/_posts/%E7%AC%AC%E4%B8%80%E5%91%A8%E5%AD%A6%E4%B9%A0%E5%86%85%E5%AE%B9/829cc3ccd0cc4d3348862a53931d05b0.png" alt="829cc3ccd0cc4d3348862a53931d05b0"></p>
-<p>小技巧：用于指向用户目录的 <strong><code>~</code></strong></p>
-<p><img src="/./../images/_posts/%E7%AC%AC%E4%B8%80%E5%91%A8%E5%AD%A6%E4%B9%A0%E5%86%85%E5%AE%B9/6010c56bce0f326079011cdb89ccfd5e.png" alt="6010c56bce0f326079011cdb89ccfd5e"></p>
-<p><img src="/./../images/_posts/%E7%AC%AC%E4%B8%80%E5%91%A8%E5%AD%A6%E4%B9%A0%E5%86%85%E5%AE%B9/image-20240921194358029.png" alt="image-20240921194358029">小横杠可以返回<strong>上一个目录</strong>，抽象意义上的上一个。极大方便在两个文件夹之间跳转</p>
-<p><img src="/./../images/_posts/%E7%AC%AC%E4%B8%80%E5%91%A8%E5%AD%A6%E4%B9%A0%E5%86%85%E5%AE%B9/94f3e962b9d9d73ce03bde3294a6300c.png" alt="94f3e962b9d9d73ce03bde3294a6300c"></p>
-<p>获取<code>ls</code>指令的帮助，例如<strong>flag</strong>（标志，横杠加上一个字母）和<strong>option</strong>（操作，含有参数）</p>
-<p>其中有一个指令以后会经常用到</p>
-<p><img src="/./../images/_posts/%E7%AC%AC%E4%B8%80%E5%91%A8%E5%AD%A6%E4%B9%A0%E5%86%85%E5%AE%B9/147377e44049664ec7495a568ffa0923.png" alt="147377e44049664ec7495a568ffa0923"></p>
-<p>可以采用<strong>长列表格式</strong></p>
-<p><strong>目录的写入权限</strong>和<strong>文件的写入权限</strong>的不同：<br>只拥有文件写入权限你可以改变一个文件的内容，甚至把它清空，但是你无法删除它</p>
-<p>目录的执行权限通常来说就是搜索</p>
-<p><img src="/./../images/_posts/%E7%AC%AC%E4%B8%80%E5%91%A8%E5%AD%A6%E4%B9%A0%E5%86%85%E5%AE%B9/695cefebaf77abf1ef461161c8ea8e95.png" alt="695cefebaf77abf1ef461161c8ea8e95"></p>
-<p>新建一个文件夹cnm</p>
-<p>删除Pictures中的文件</p>
-<p>快捷键<code>ctrl+l</code>，可以清空终端，将光标移到顶部</p>
-<p><strong><code>grep</code></strong> 在输入流中搜索指定的关键字</p>
-<p>root在Macos和Linux中的地位像Windows里面的Administrator</p>
-<p>root像一种超级用户，拥有极高的权限</p>
-<p>**<code>sudo</code>**：super user do</p>
-<p>在正常命令行前加上这个程序，命令的运行就会以root权限运行</p>
-<p><img src="/./../images/_posts/%E7%AC%AC%E4%B8%80%E5%91%A8%E5%AD%A6%E4%B9%A0%E5%86%85%E5%AE%B9/f3f35ec32666295c8e1ad782f40f3c5d.png" alt="f3f35ec32666295c8e1ad782f40f3c5d">变成超级用户登入shell    ($ —&gt;#)</p>
-<p><img src="/./../images/_posts/%E7%AC%AC%E4%B8%80%E5%91%A8%E5%AD%A6%E4%B9%A0%E5%86%85%E5%AE%B9/image-20240909192810195.png" alt="image-20240909192810195"></p>
-<p>小细节：改变这种内核的参数需要root权限，但是第二次明明用了<code>sudo</code> ，理应获得了执行的权限了呀？其实只有echo运行的时候才是root权限，重定向后没有root权限了，即shell打开brightness的时候并没有用<code>sudo</code></p>
-<p>可以这么解决：#echo 1060 |sudo tee brightness</p>
-<p><code>xdg-open xxxhtml</code></p>
-<h3 id="待解答的问题："><a href="#待解答的问题：" class="headerlink" title="待解答的问题："></a>待解答的问题：</h3><h4 id="问题一："><a href="#问题一：" class="headerlink" title="问题一："></a>问题一：</h4><h4 id="目录符号都有哪些？用途是啥？"><a href="#目录符号都有哪些？用途是啥？" class="headerlink" title="目录符号都有哪些？用途是啥？"></a>目录符号都有哪些？用途是啥？</h4><p>在 Linux 系统中的常用目录符号:</p>
-<ol>
-<li><p><strong><code>.</code>（点号）</strong>：</p>
-<ul>
-<li>代表当前目录。</li>
-<li><strong>用途</strong>：在命令中可以用来指定当前目录。例如，<code>./script.sh</code> 表示在当前目录下执行 <code>script.sh</code> 文件。</li>
-</ul>
-<p>2.<strong><code>..</code>（两个点号）</strong>：</p>
-<ul>
-<li>代表上级目录。</li>
-<li><strong>用途</strong>：可以用来返回到当前目录的上一级。例如，<code>cd ..</code> 命令将当前目录切换到其上级目录。</li>
-</ul>
-<p>3.<strong><code>~</code>（波浪号）</strong>：</p>
-<ul>
-<li>代表当前用户的主目录。</li>
-<li><strong>用途</strong>：用于快速访问用户的主目录。例如，<code>cd ~</code> 会切换到当前用户的主目录，<code>~/Documents</code> 表示主目录下的 <code>Documents</code> 文件夹。</li>
-</ul>
-<p>3.<strong><code>/</code>（斜杠）</strong>：代表根目录。</p>
-<ul>
-<li><strong>用途</strong>：用于构建绝对路径。例如，<code>/etc/hosts</code> 表示从根目录开始的绝对路径。</li>
-</ul>
-<p>4.<strong><code>-</code>（连字符）</strong>：</p>
-<ul>
-<li>在某些命令中，<code>-</code> 用作标志，表示标准输入或标准输出。</li>
-<li><strong>用途</strong>：例如，<code>cat -</code> 表示从标准输入读取数据。</li>
-<li>另外，在某些命令中（如 <code>cd</code>），<code>-</code> 用来切换到上一个目录。例如，<code>cd -</code> 会带你回到你之前所在的目录。</li>
-</ul>
-</li>
-</ol>
-<h4 id="问题二："><a href="#问题二：" class="headerlink" title="问题二："></a>问题二：</h4><h4 id="什么是绝对目录？什么是相对目录？"><a href="#什么是绝对目录？什么是相对目录？" class="headerlink" title="什么是绝对目录？什么是相对目录？"></a>什么是绝对目录？什么是相对目录？</h4><ul>
-<li><p><strong>绝对路径</strong>是从系统根目录开始的完整路径，无论当前的工作目录是什么，都能准确定位文件位置。</p>
-</li>
-<li><p><strong>相对路径</strong>所<strong>“相对”</strong>的对象是工作目录，不用从根目录开始写起，相较于绝对路径不那么冗长。</p>
-</li>
-<li><p>两个路径在使用场景上也有所不同：</p>
-<ul>
-<li>绝对路径主要用来确保路径唯一且不受当前工作目录的影响，也就是说，无论在哪个工作目录内，文件都可以正常的调用</li>
-<li>相对路径可以用来方便在同一个项目&#x2F;目录结构内工作</li>
-</ul>
-</li>
-</ul>
-<h4 id="问题三："><a href="#问题三：" class="headerlink" title="问题三："></a>问题三：</h4><h4 id="管道符？重定向命令？他们是啥？有何作用？"><a href="#管道符？重定向命令？他们是啥？有何作用？" class="headerlink" title="管道符？重定向命令？他们是啥？有何作用？"></a>管道符？重定向命令？他们是啥？有何作用？</h4><p><strong>重定向命令</strong>：</p>
-<p><img src="/./../images/_posts/%E7%AC%AC%E4%B8%80%E5%91%A8%E5%AD%A6%E4%B9%A0%E5%86%85%E5%AE%B9/35422338622ac7c0bf6fb70d292663d4.png" alt="35422338622ac7c0bf6fb70d292663d4"></p>
-<p>用<strong>输出重定向</strong>和<strong>输入重定向</strong>往文件里写东西（这个模式很像cpp里面的<code>cin</code>和<code>cout</code>），用cat可以打印文件里的东西</p>
-<p>两个大于号（&gt;&gt;)<strong>追加重定向</strong>顾名思义是追加而不是覆写</p>
-<p><img src="/./../images/_posts/%E7%AC%AC%E4%B8%80%E5%91%A8%E5%AD%A6%E4%B9%A0%E5%86%85%E5%AE%B9/6b29a2bccd84bfb5cf3b3e055c3aed7f.png" alt="6b29a2bccd84bfb5cf3b3e055c3aed7f"></p>
-<p><strong>管道输入符  pipe  <code> |</code></strong>  ：</p>
-<p>取左侧程序的<strong>输出</strong>，作为右侧程序的<strong>输入</strong>，用于串联多个命令</p>
-<p>将工作目录长列表模式下列出的这么多文件<strong>作为右侧程序的输入</strong>（tail是保留输出输入的最后几行）</p>
-<h4 id="问题四："><a href="#问题四：" class="headerlink" title="问题四："></a>问题四：</h4><h4 id="如何查看当前所在目录？如何切换目录？如何查看目录下都有什么内容？"><a href="#如何查看当前所在目录？如何切换目录？如何查看目录下都有什么内容？" class="headerlink" title="如何查看当前所在目录？如何切换目录？如何查看目录下都有什么内容？"></a>如何查看当前所在目录？如何切换目录？如何查看目录下都有什么内容？</h4><ol>
-<li><p>查看当前所在目录：<code>pwd</code>  (print working directory)<img src="C:\Users\ArPon\AppData\Roaming\Typora\typora-user-images\image-20240908225642891.png" alt="image-20240908225642891"></p>
-</li>
-<li><p>切换目录：<code>cd</code> (change directory)</p>
-<p>返回到用户的主目录 ：<code>cd ~</code></p>
-<p>返回到上级目录   ：<code>cd ..</code></p>
-</li>
-<li><p>查看目录下的内容 :<code>ls</code>（List）</p>
-<p>显示详细信息：<code>ls -l</code></p>
-</li>
-</ol>
-<h4 id="问题五："><a href="#问题五：" class="headerlink" title="问题五："></a>问题五：</h4><h4 id="如何创建文件？如何移动文件？如何重命名文件？如何删除文件？如何查看文件内容？如何运行可执行文件？"><a href="#如何创建文件？如何移动文件？如何重命名文件？如何删除文件？如何查看文件内容？如何运行可执行文件？" class="headerlink" title="如何创建文件？如何移动文件？如何重命名文件？如何删除文件？如何查看文件内容？如何运行可执行文件？"></a>如何创建文件？如何移动文件？如何重命名文件？如何删除文件？如何查看文件内容？如何运行可执行文件？</h4><p>1.创建文件：<code>touch</code>  ,也可以直接用<code>echo</code>将命令写入一个新文件</p>
-<p>2.移动文件：<code>mv</code>   eg:<code>mv yuanshen.txt /home/user/Documents/</code></p>
-<p>3.重命名文件：<code>mv</code>  eg：<code>mv yuanshen.txt rubbish.txt</code>  将yuanshen更名为rubbish</p>
-<p>4.删除文件：<code>rm</code></p>
-<p>5.查看文件内容：<code>cat</code></p>
-<p>6.运行可执行文件：<code>./文件名</code> 若文件没有执行权限，添加执行权限：<code>chmod +x 文件名</code> 然后再运行</p>
-<h4 id="问题六："><a href="#问题六：" class="headerlink" title="问题六："></a>问题六：</h4><h4 id="如何创建文件夹？如何删除空文件夹？如何删除非空文件夹？"><a href="#如何创建文件夹？如何删除空文件夹？如何删除非空文件夹？" class="headerlink" title="如何创建文件夹？如何删除空文件夹？如何删除非空文件夹？"></a>如何创建文件夹？如何删除空文件夹？如何删除非空文件夹？</h4><p>1.创建空文件夹：<code>mkdir</code></p>
-<p>2.删除空文件夹：<code>rmdir</code> 如果文件夹非空则会报错</p>
-<p>3.删除非空文件夹：<code>rm -r 文件夹名</code></p>
-<p>​	删除文件夹时对文件夹内的每个文件和文件夹进行确认：<code>rm -ri 文件夹名</code></p>
-<p>​	强制删除文件夹及其内容:<code>rm -rf 文件夹名</code></p>
-<h4 id="问题七："><a href="#问题七：" class="headerlink" title="问题七："></a>问题七：</h4><h4 id="tac命令？echo命令？sleep命令？"><a href="#tac命令？echo命令？sleep命令？" class="headerlink" title="tac命令？echo命令？sleep命令？"></a><code>tac</code>命令？<code>echo</code>命令？<code>sleep</code>命令？</h4><p>1.<code>tac</code> 一看就和<code>cat</code>很有关系，<code>tac</code>是<code>cat</code>的反向操作.<code>cat</code>按顺序显示文件内容，<code>tac</code>将文件内容按行反向显示</p>
-<p>2.<code>echo </code>  :  类似c语言中的<code>printf</code>，可以显示一段文本，也可以显示变量的值</p>
-<p>3.<code>sleep</code> : 命令用于暂停脚本或命令的执行指定的时间。它通常用于创建延迟，或者在自动化脚本中等待某些条件。</p>
-<h4 id="补充问题："><a href="#补充问题：" class="headerlink" title="补充问题："></a>补充问题：</h4><h4 id="当不能使用cat和tac时如何读取Linux的文件"><a href="#当不能使用cat和tac时如何读取Linux的文件" class="headerlink" title="当不能使用cat和tac时如何读取Linux的文件"></a>当不能使用<code>cat</code>和<code>tac</code>时如何读取Linux的文件</h4><p>1.<code>more filename</code> 分页显示文件内容，按空格键来翻页，按 <code>q</code> 键退出查看</p>
-<p>2.<code>less filename</code>，类似于<code>more</code>，但是更加灵活，按空格键向前翻一整页，按b键向后翻一整页，同样可以按b退出</p>
-<p>3.默认情况下，<code>head filename</code> 显示文件的前十行，使用 <code>-n</code> 选项来指定显示的行数，比如 <code>head -n 20 filename</code></p>
-<p>4.默认情况下，<code>tail filename</code> 显示文件的前十行，使用 <code>-n</code> 选项来指定显示的行数，比如 <code>tail -n 20 filename</code>。<code>tail</code>还可以通过<code>-f</code>选项跟踪文件内容的变化,例如查看日志文件的实时更新，查看程序的实时输出</p>
-<p>5.<code>grep</code>（Global Regular Expression Print），其中Regular Expression正是大名鼎鼎的反人类的正则表达式</p>
-<p><code>grep</code>命令是一个非常强大的文本搜索工具，用于在文件或输入流中查找匹配特定模式的行，同时支持正则表达式。</p>
-<ul>
-<li>基本用法：<code>grep 选项 模式 文件</code></li>
-</ul>
-<p>模式：要搜索的文本模式，普通字符串或正则表达式</p>
-<p>文件：要搜索的一个或多个文件。如果不指定文件，<code>grep</code> 将从标准输入中读取数据（可以通过管道传入数据）。</p>
-<ul>
-<li><p>常用选项：**<code>-i</code>**：忽略大小写</p>
-<p>**<code>-v</code>**：显示不匹配的行。</p>
-<p>**<code>-r</code> 或 <code>-R</code>**：递归地搜索目录中的文件。</p>
-<p>**<code>-n</code>**：显示匹配行的行号。</p>
-<p>**<code>-l</code>**：只显示包含匹配模式的文件名。</p>
-<p>**<code>-w</code>**：只匹配整个单词。</p>
-</li>
-</ul>
-<p>​	**<code>-o</code>**：只输出匹配的部分。</p>
-<p>​	**<code>-c</code>**：只输出匹配的行数。</p>
-<p>​	**<code>	-A</code>**：在匹配的行后面显示指定行数的内容。</p>
-<p>​	**<code>	-B</code>**：在匹配的行前面显示指定行数的内容。</p>
-<p>​	**<code>-C</code>**：在匹配的行前后各显示指定行数的内容。</p>
-<h2 id="HTTP"><a href="#HTTP" class="headerlink" title="HTTP"></a>HTTP</h2><h3 id="问题一：HTTP是什么？"><a href="#问题一：HTTP是什么？" class="headerlink" title="问题一：HTTP是什么？"></a>问题一：HTTP是什么？</h3><p><strong>HTTP</strong>（Hypertext Transfer Protocol，超文本传输协议）是一种用于传输网页数据的协议。它是互联网中的主要通信协议，定义了客户端（如浏览器）和服务器之间如何交换数据。HTTP 是无状态的，这意味着每个请求都是独立的，不会记住之前的请求状态。HTTP 通常使用 TCP 作为传输层协议，运行在 80 端口上（在 HTTPS 中则使用 443 端口）。</p>
-<h3 id="问题二：URL是什么？"><a href="#问题二：URL是什么？" class="headerlink" title="问题二：URL是什么？"></a>问题二：URL是什么？</h3><p><strong>URL</strong>（Uniform Resource Locator，统一资源定位符）是指向互联网资源的地址。它提供了一个资源的具体位置和访问方法。一个典型的 URL 包含多个部分，如下所示：</p>
-<ul>
-<li><strong>协议</strong>（如 <code>http://</code> 或 <code>https://</code>）：指定使用的协议。</li>
-<li><strong>主机名</strong>（如 <code>www.example.com</code>）：指定服务器的域名或 IP 地址。</li>
-<li><strong>端口</strong>（可选，如 <code>:80</code> 或 <code>:443</code>）：指定服务器上的端口，HTTP 默认使用端口 80，HTTPS 默认使用端口 443。</li>
-<li><strong>路径</strong>（如 <code>/path/to/resource</code>）：指定服务器上的资源位置。</li>
-<li><strong>查询字符串</strong>（可选，如 <code>?key=value&amp;key2=value2</code>）：用于传递参数给服务器。</li>
-<li><strong>片段标识符</strong>（可选，如 <code>#section1</code>）：指定资源中的某一部分。</li>
-</ul>
-<p>分析该URL的结构：<code>https://blog.potatowo.top/2023/12/23/``记一次CMS代码审计/#寻找可利用漏洞</code></p>
-<p><code>https://</code>：这是指定使用的协议。</p>
-<p><code>blog.potatowo.top</code>: 这是服务器的域名</p>
-<p><code>/2023/12/23/记一次CMS代码审计/</code>：这是 URL 的路径部分，指定了服务器上的资源位置。路径用来定位具体的资源或页面。</p>
-<p><code>#寻找可利用漏洞</code>:这是 URL 的片段标识符部分,片段标识符以 <code>#</code> 开头，指示浏览器在加载页面时需要跳转到特定部分。这个部分通常用来链接到页面中的某个位置或章节。</p>
-<h3 id="问题三：HTTP请求包的结构有哪几部分组成？"><a href="#问题三：HTTP请求包的结构有哪几部分组成？" class="headerlink" title="问题三：HTTP请求包的结构有哪几部分组成？"></a>问题三：HTTP请求包的结构有哪几部分组成？</h3><p>HTTP 请求包的结构通常包括以下几部分：</p>
-<ol>
-<li><strong>请求行</strong>：包含请求方法（如 GET、POST）、请求 URI 和 HTTP 版本。例如：<code>GET /index.html HTTP/1.1</code>。</li>
-<li><strong>请求头</strong>：包含各种头部信息，用于提供关于请求的附加信息，如 <code>Host</code>、<code>User-Agent</code>、<code>Accept</code> 等。</li>
-<li><strong>空行</strong>：请求头和请求体之间的空行，用于分隔请求头和请求体。</li>
-<li><strong>请求体</strong>（可选）：在某些请求方法（如 POST、PUT）中，包含发送给服务器的数据。<strong>在 GET 请求中通常没有请求体。</strong></li>
-</ol>
-<h3 id="问题四：常见的请求头有哪些？它们有什么作用？"><a href="#问题四：常见的请求头有哪些？它们有什么作用？" class="headerlink" title="问题四：常见的请求头有哪些？它们有什么作用？"></a>问题四：常见的请求头有哪些？它们有什么作用？</h3><p>常见的 HTTP 请求头包括：</p>
-<ol>
-<li><strong>Host</strong>：指定请求的主机名和端口号，通常用于虚拟主机。比如 <code>Host: www.example.com</code>。</li>
-<li><strong>User-Agent</strong>：指定发起请求的客户端软件信息，如浏览器类型和版本。例如：<code>User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36</code>。</li>
-<li><strong>Accept</strong>：指定客户端能够处理的内容类型。例如：<code>Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8</code>。</li>
-<li><strong>Accept-Language</strong>：指定客户端能够处理的语言类型。例如：<code>Accept-Language: en-US,en;q=0.5</code>。</li>
-<li><strong>Accept-Encoding</strong>：指定客户端能够处理的内容编码方式，如压缩方式。例如：<code>Accept-Encoding: gzip, deflate, br</code>。</li>
-<li><strong>Connection</strong>：指定是否保持连接的持续性。例如：<code>Connection: keep-alive</code>。</li>
-<li><strong>Authorization</strong>：用于传递认证信息，如令牌或凭据。例如：<code>Authorization: Bearer &lt;token&gt;</code>。</li>
-<li><strong>Referer</strong>:指示当前请求的来源页面,帮助服务器了解用户是从哪个页面点击过来的</li>
-<li><strong>Cookie</strong>:传递客户端存储的 Cookie 数据给服务器,包含客户端存储的 Cookie 数据</li>
-<li><strong>Content-Type</strong>:指定请求体的媒体类型,帮助服务器正确解析请求体数据。例如，<code>application/json</code> 表示请求体包含 JSON 数据，而 <code>application/x-www-form-urlencoded</code> 表示表单数据。这个头部对于 POST 和 PUT 请求尤为重要，因为它们通常包含请求体。</li>
-<li><strong>X-Forwarded-For</strong>:用于标识客户端的原始 IP 地址</li>
-</ol>
-<p>eg:<img src="/./../images/_posts/%E7%AC%AC%E4%B8%80%E5%91%A8%E5%AD%A6%E4%B9%A0%E5%86%85%E5%AE%B9/image-20240915163659241.png" alt="image-20240915163659241"></p>
-<h3 id="问题五：请求方式有哪些？GET和POST有什么区别？如何通过GET和POST传参？"><a href="#问题五：请求方式有哪些？GET和POST有什么区别？如何通过GET和POST传参？" class="headerlink" title="问题五：请求方式有哪些？GET和POST有什么区别？如何通过GET和POST传参？"></a>问题五：请求方式有哪些？GET和POST有什么区别？如何通过GET和POST传参？</h3><p><strong>HTTP 请求方式</strong>（方法）包括：</p>
-<ul>
-<li><strong>GET</strong>：用于请求资源。请求的数据附加在 URL 中，适合获取数据，不改变服务器状态。数据通过查询字符串传递，例如：<code>GET /search?Welcome_to=ROIS</code>。</li>
-<li><strong>POST</strong>：用于提交数据给服务器，通常用于创建或更新资源。请求的数据放在请求体中，不暴露在 URL 中，例如：<code>POST /submit</code>，请求体中包含数据。</li>
-</ul>
-<p><strong>GET 和 POST 的区别</strong>：</p>
-<ol>
-<li><p><strong>数据传递</strong>：</p>
-<p><strong>GET</strong>：数据附加在 URL 的查询字符串中，长度有限制（约 2KB），对敏感数据不安全。</p>
-<p><strong>POST</strong>：数据放在请求体中，没有长度限制，更适合传递大量数据和敏感信息。</p>
-</li>
-<li><p><strong>缓存</strong></p>
-<p><strong>GET</strong> 请求通常可以被缓存，浏览器可能会缓存响应。</p>
-<p><strong>POST</strong> 请求通常不会被缓存。</p>
-</li>
-<li><p><strong>安全性</strong>：</p>
-<p><strong>GET</strong> 请求的参数在 URL 中明文传递，不适合传递敏感数据。</p>
-<p><strong>POST</strong> 请求的数据在请求体中，相对更安全，但仍需 HTTPS 加密传输以确保安全性。</p>
-</li>
-</ol>
-<p><strong>通过 GET 和 POST 传参</strong>：</p>
-<p><strong>GET 传参</strong>：数据通过 URL 的查询字符串传递，例如 <code>http://yuanshen.com/search?a=op</code>。</p>
-<p><strong>POST 传参</strong>：数据通过请求体传递，可以使用表单数据、JSON 格式或其他编码方式。例如，表单数据可以用 <code>application/x-www-form-urlencoded</code> 编码，JSON 数据用 <code>application/json</code> 编码。(这个格式在做Special Http这道题的时候就有出现过)</p>
-
+        
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2024/09/21/%E7%AC%AC%E4%B8%80%E5%91%A8%E5%AD%A6%E4%B9%A0%E5%86%85%E5%AE%B9/" data-id="cm1c38ijy000284sk1yym3j6v" data-title="第一周学习内容" class="article-share-link"><span class="fa fa-share">分享</span></a>
+      <a data-url="http://example.com/2024/09/21/%E7%AC%AC%E4%B8%80%E5%91%A8%E5%AD%A6%E4%B9%A0%E5%86%85%E5%AE%B9/" data-id="cm1c61og00002bosk0vd23psg" data-title="第一周学习内容" class="article-share-link"><span class="fa fa-share">分享</span></a>
       
       
       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/BurpSuite/" rel="tag">BurpSuite</a></li></ul>
-
     </footer>
   </div>
   
@@ -343,12 +129,12 @@
     
     <div class="e-content article-entry" itemprop="articleBody">
       
-        <p><img src="/./../images/_posts/Pax/image-20240921174138307.png" alt="image-20240921174138307"></p>
+        <p><img src="/images/_posts/Pax/image20240921174138307.png" alt="image-20240921174138307"></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2024/09/21/Pax/" data-id="cm1c38ijt000084sk65c3f6zb" data-title="Pax" class="article-share-link"><span class="fa fa-share">分享</span></a>
+      <a data-url="http://example.com/2024/09/21/Pax/" data-id="cm1c61ofv0000bosk3lew8ob5" data-title="Pax" class="article-share-link"><span class="fa fa-share">分享</span></a>
       
       
       
@@ -387,7 +173,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2024/09/18/hello-world/" data-id="cm1c38ijx000184ske0gv7xyd" data-title="Hello World" class="article-share-link"><span class="fa fa-share">分享</span></a>
+      <a data-url="http://example.com/2024/09/18/hello-world/" data-id="cm1c61ofz0001bosk5fouhz0p" data-title="Hello World" class="article-share-link"><span class="fa fa-share">分享</span></a>
       
       
       
@@ -409,23 +195,9 @@
 
   
     
-  <div class="widget-wrap">
-    <h3 class="widget-title">标签</h3>
-    <div class="widget">
-      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/BurpSuite/" rel="tag">BurpSuite</a></li></ul>
-    </div>
-  </div>
-
 
   
     
-  <div class="widget-wrap">
-    <h3 class="widget-title">标签云</h3>
-    <div class="widget tagcloud">
-      <a href="/tags/BurpSuite/" style="font-size: 10px;">BurpSuite</a>
-    </div>
-  </div>
-
   
     
   <div class="widget-wrap">
