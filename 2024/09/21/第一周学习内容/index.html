@@ -4,15 +4,40 @@
   <meta charset="utf-8">
   
   
-  <title>Hexo</title>
+  <title>第一周学习内容 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://example.com/index.html">
+  <meta name="description" content="理解Bp的原理Bp通过拦截和修改 HTTP&#x2F;HTTPS 请求和响应来进行漏洞扫描、渗透测试和安全评估 BurpSuite截取客户端发送给服务器的请求，然后伪装成客户端与服务器进行通信  学习Linux常见命令笔记：shell: 用来执行命令行的命令 bash是shell（终端）的一种 shell 黑色的框框 最上面有一行命令行提示符 写命令：带着参数执行程序 什么是环境变量?它有何作用？">
+<meta property="og:type" content="article">
+<meta property="og:title" content="第一周学习内容">
+<meta property="og:url" content="http://example.com/2024/09/21/%E7%AC%AC%E4%B8%80%E5%91%A8%E5%AD%A6%E4%B9%A0%E5%86%85%E5%AE%B9/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="理解Bp的原理Bp通过拦截和修改 HTTP&#x2F;HTTPS 请求和响应来进行漏洞扫描、渗透测试和安全评估 BurpSuite截取客户端发送给服务器的请求，然后伪装成客户端与服务器进行通信  学习Linux常见命令笔记：shell: 用来执行命令行的命令 bash是shell（终端）的一种 shell 黑色的框框 最上面有一行命令行提示符 写命令：带着参数执行程序 什么是环境变量?它有何作用？">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://example.com/images/_posts/%E7%AC%AC%E4%B8%80%E5%91%A8%E5%AD%A6%E4%B9%A0%E5%86%85%E5%AE%B9/image-20240921193704564.png">
+<meta property="og:image" content="http://example.com/images/_posts/%E7%AC%AC%E4%B8%80%E5%91%A8%E5%AD%A6%E4%B9%A0%E5%86%85%E5%AE%B9/image-20240921193724761.png">
+<meta property="og:image" content="http://example.com/images/_posts/%E7%AC%AC%E4%B8%80%E5%91%A8%E5%AD%A6%E4%B9%A0%E5%86%85%E5%AE%B9/81786d1dd22eca610591f5e855843601.png">
+<meta property="og:image" content="http://example.com/images/_posts/%E7%AC%AC%E4%B8%80%E5%91%A8%E5%AD%A6%E4%B9%A0%E5%86%85%E5%AE%B9/6a4012431a90a6a1fce3bbd1e57a8b8c.png">
+<meta property="og:image" content="http://example.com/images/_posts/%E7%AC%AC%E4%B8%80%E5%91%A8%E5%AD%A6%E4%B9%A0%E5%86%85%E5%AE%B9/7fa56b966bdc40c439f000f0ffdcd1ee.png">
+<meta property="og:image" content="http://example.com/images/_posts/%E7%AC%AC%E4%B8%80%E5%91%A8%E5%AD%A6%E4%B9%A0%E5%86%85%E5%AE%B9/c7be6dcfc77dc28a2ecaf70de93596ec.png">
+<meta property="og:image" content="http://example.com/images/_posts/%E7%AC%AC%E4%B8%80%E5%91%A8%E5%AD%A6%E4%B9%A0%E5%86%85%E5%AE%B9/3a302d0d9563ba2991d85870bb8ec266.png">
+<meta property="og:image" content="http://example.com/images/_posts/%E7%AC%AC%E4%B8%80%E5%91%A8%E5%AD%A6%E4%B9%A0%E5%86%85%E5%AE%B9/829cc3ccd0cc4d3348862a53931d05b0.png">
+<meta property="og:image" content="http://example.com/images/_posts/%E7%AC%AC%E4%B8%80%E5%91%A8%E5%AD%A6%E4%B9%A0%E5%86%85%E5%AE%B9/6010c56bce0f326079011cdb89ccfd5e.png">
+<meta property="og:image" content="http://example.com/images/_posts/%E7%AC%AC%E4%B8%80%E5%91%A8%E5%AD%A6%E4%B9%A0%E5%86%85%E5%AE%B9/image-20240921194358029.png">
+<meta property="og:image" content="http://example.com/images/_posts/%E7%AC%AC%E4%B8%80%E5%91%A8%E5%AD%A6%E4%B9%A0%E5%86%85%E5%AE%B9/94f3e962b9d9d73ce03bde3294a6300c.png">
+<meta property="og:image" content="http://example.com/images/_posts/%E7%AC%AC%E4%B8%80%E5%91%A8%E5%AD%A6%E4%B9%A0%E5%86%85%E5%AE%B9/147377e44049664ec7495a568ffa0923.png">
+<meta property="og:image" content="http://example.com/images/_posts/%E7%AC%AC%E4%B8%80%E5%91%A8%E5%AD%A6%E4%B9%A0%E5%86%85%E5%AE%B9/695cefebaf77abf1ef461161c8ea8e95.png">
+<meta property="og:image" content="http://example.com/images/_posts/%E7%AC%AC%E4%B8%80%E5%91%A8%E5%AD%A6%E4%B9%A0%E5%86%85%E5%AE%B9/f3f35ec32666295c8e1ad782f40f3c5d.png">
+<meta property="og:image" content="http://example.com/images/_posts/%E7%AC%AC%E4%B8%80%E5%91%A8%E5%AD%A6%E4%B9%A0%E5%86%85%E5%AE%B9/image-20240909192810195.png">
+<meta property="og:image" content="http://example.com/images/_posts/%E7%AC%AC%E4%B8%80%E5%91%A8%E5%AD%A6%E4%B9%A0%E5%86%85%E5%AE%B9/35422338622ac7c0bf6fb70d292663d4.png">
+<meta property="og:image" content="http://example.com/images/_posts/%E7%AC%AC%E4%B8%80%E5%91%A8%E5%AD%A6%E4%B9%A0%E5%86%85%E5%AE%B9/6b29a2bccd84bfb5cf3b3e055c3aed7f.png">
+<meta property="og:image" content="c:\Users\ArPon\AppData\Roaming\Typora\typora-user-images\image-20240908225642891.png">
+<meta property="og:image" content="http://example.com/images/_posts/%E7%AC%AC%E4%B8%80%E5%91%A8%E5%AD%A6%E4%B9%A0%E5%86%85%E5%AE%B9/image-20240915163659241.png">
+<meta property="article:published_time" content="2024-09-21T11:34:31.000Z">
+<meta property="article:modified_time" content="2024-09-21T11:49:52.841Z">
 <meta property="article:author" content="John Doe">
+<meta property="article:tag" content="BurpSuite">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/images/_posts/%E7%AC%AC%E4%B8%80%E5%91%A8%E5%AD%A6%E4%B9%A0%E5%86%85%E5%AE%B9/image-20240921193704564.png">
   
     <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -67,9 +92,7 @@
 </header>
 
       <div class="outer">
-        <section id="main">
-  
-    <article id="post-第一周学习内容" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+        <section id="main"><article id="post-第一周学习内容" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/2024/09/21/%E7%AC%AC%E4%B8%80%E5%91%A8%E5%AD%A6%E4%B9%A0%E5%86%85%E5%AE%B9/" class="article-date">
   <time class="dt-published" datetime="2024-09-21T11:34:31.000Z" itemprop="datePublished">2024-09-21</time>
@@ -82,8 +105,8 @@
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2024/09/21/%E7%AC%AC%E4%B8%80%E5%91%A8%E5%AD%A6%E4%B9%A0%E5%86%85%E5%AE%B9/">第一周学习内容</a>
+    <h1 class="p-name article-title" itemprop="headline name">
+      第一周学习内容
     </h1>
   
 
@@ -316,89 +339,19 @@
     </footer>
   </div>
   
-</article>
-
-
-
+    
+<nav id="article-nav">
   
-    <article id="post-Pax" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2024/09/21/Pax/" class="article-date">
-  <time class="dt-published" datetime="2024-09-21T09:23:39.000Z" itemprop="datePublished">2024-09-21</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2024/09/21/Pax/">Pax</a>
-    </h1>
+    <a href="/2024/09/21/Pax/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">后一篇</strong>
+      <div class="article-nav-title">Pax</div>
+    </a>
   
+</nav>
 
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <p><img src="/./../images/_posts/Pax/image-20240921174138307.png" alt="image-20240921174138307"></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2024/09/21/Pax/" data-id="cm1c38ijt000084sk65c3f6zb" data-title="Pax" class="article-share-link"><span class="fa fa-share">分享</span></a>
-      
-      
-      
-    </footer>
-  </div>
   
 </article>
-
-
-
-  
-    <article id="post-hello-world" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2024/09/18/hello-world/" class="article-date">
-  <time class="dt-published" datetime="2024-09-18T02:27:19.375Z" itemprop="datePublished">2024-09-18</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2024/09/18/hello-world/">Hello World</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <p>ysxssXXsxXsxsxXXSXXSx 应是天仙醉</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2024/09/18/hello-world/" data-id="cm1c38ijx000184ske0gv7xyd" data-title="Hello World" class="article-share-link"><span class="fa fa-share">分享</span></a>
-      
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
 
 
 </section>
