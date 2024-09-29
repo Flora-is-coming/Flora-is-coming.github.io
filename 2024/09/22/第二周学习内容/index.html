@@ -1,0 +1,427 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>第二周：HTML、CSS、JS | Flora</title><meta name="author" content="Flora"><meta name="copyright" content="Flora"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="HTML (超文本标记语言: HyperText Markup Language)  ①利用map创建图像映射：1.利用img定义图片时同时定义usemap 2.利用map标签创建映射的形状（rect，circle，pioy），参数，以及链接对象 ②利用table创建表格： 主要标签有 &lt;table&gt; &lt;thead&gt; &lt;tr&gt; &lt;th&gt; &lt;ca">
+<meta property="og:type" content="article">
+<meta property="og:title" content="第二周：HTML、CSS、JS">
+<meta property="og:url" content="https://flora-is-coming.github.io/2024/09/22/%E7%AC%AC%E4%BA%8C%E5%91%A8%E5%AD%A6%E4%B9%A0%E5%86%85%E5%AE%B9/index.html">
+<meta property="og:site_name" content="Flora">
+<meta property="og:description" content="HTML (超文本标记语言: HyperText Markup Language)  ①利用map创建图像映射：1.利用img定义图片时同时定义usemap 2.利用map标签创建映射的形状（rect，circle，pioy），参数，以及链接对象 ②利用table创建表格： 主要标签有 &lt;table&gt; &lt;thead&gt; &lt;tr&gt; &lt;th&gt; &lt;ca">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png">
+<meta property="article:published_time" content="2024-09-22T01:07:14.000Z">
+<meta property="article:modified_time" content="2024-09-24T11:59:05.067Z">
+<meta property="article:author" content="Flora">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://flora-is-coming.github.io/2024/09/22/%E7%AC%AC%E4%BA%8C%E5%91%A8%E5%AD%A6%E4%B9%A0%E5%86%85%E5%AE%B9/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=4.13.0"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.1/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.33/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.11.1/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '第二周：HTML、CSS、JS',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2024-09-24 19:59:05'
+}</script><script>(win=>{
+      win.saveToLocal = {
+        set: (key, value, ttl) => {
+          if (ttl === 0) return
+          const now = Date.now()
+          const expiry = now + ttl * 86400000
+          const item = {
+            value,
+            expiry
+          }
+          localStorage.setItem(key, JSON.stringify(item))
+        },
+      
+        get: key => {
+          const itemStr = localStorage.getItem(key)
+      
+          if (!itemStr) {
+            return undefined
+          }
+          const item = JSON.parse(itemStr)
+          const now = Date.now()
+      
+          if (now > item.expiry) {
+            localStorage.removeItem(key)
+            return undefined
+          }
+          return item.value
+        }
+      }
+    
+      win.getScript = (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        script.onerror = reject
+        script.onload = script.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          script.onload = script.onreadystatechange = null
+          resolve()
+        }
+
+        Object.keys(attr).forEach(key => {
+          script.setAttribute(key, attr[key])
+        })
+
+        document.head.appendChild(script)
+      })
+    
+      win.getCSS = (url, id = false) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onerror = reject
+        link.onload = link.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          link.onload = link.onreadystatechange = null
+          resolve()
+        }
+        document.head.appendChild(link)
+      })
+    
+      win.activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+        if (t === 'dark') activateDarkMode()
+        else if (t === 'light') activateLightMode()
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+      const detectApple = () => {
+        if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+          document.documentElement.classList.add('apple')
+        }
+      }
+      detectApple()
+    })(window)</script><meta name="generator" content="Hexo 7.3.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">7</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div><hr class="custom-hr"/></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header"><nav id="nav"><span id="blog-info"><a href="/" title="Flora"><span class="site-name">Flora</span></a></span><div id="menus"><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">第二周：HTML、CSS、JS</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2024-09-22T01:07:14.000Z" title="发表于 2024-09-22 09:07:14">2024-09-22</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2024-09-24T11:59:05.067Z" title="更新于 2024-09-24 19:59:05">2024-09-24</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="第二周：HTML、CSS、JS"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h2 id="HTML"><a href="#HTML" class="headerlink" title="HTML"></a>HTML</h2><blockquote>
+<p>(超文本标记语言: HyperText Markup Language)</p>
+</blockquote>
+<h4 id="①利用map创建图像映射："><a href="#①利用map创建图像映射：" class="headerlink" title="①利用map创建图像映射："></a>①利用map创建图像映射：</h4><p>1.利用img定义图片时同时定义usemap</p>
+<p>2.利用map标签创建映射的形状（rect，circle，pioy），参数，以及链接对象</p>
+<h4 id="②利用table创建表格："><a href="#②利用table创建表格：" class="headerlink" title="②利用table创建表格："></a>②利用table创建表格：</h4><ul>
+<li><p>主要标签有 <code>&lt;table&gt; &lt;thead&gt; &lt;tr&gt; &lt;th&gt; &lt;caption&gt;</code><br>th:table head<br>tr:table row<br>td：table data</p>
+</li>
+<li><p>每个表格从一个 table 标签开始<br>每个表格行从 tr 标签开始<br>每个表格的数据从 td 标签开始(表格可以特化为<th>)</p>
+</li>
+<li><h5 id="table标签常用属性："><a href="#table标签常用属性：" class="headerlink" title="table标签常用属性："></a>table标签常用属性：</h5></li>
+<li><p>border&#x3D;”1”   表格边框的宽度</p>
+</li>
+<li><p>bordercolor&#x3D;”#fff”   表格边框的颜色</p>
+</li>
+<li><p>cellspacing&#x3D;”5”   单元格之间的间距</p>
+</li>
+<li><p>width&#x3D;”500”   表格的总宽度</p>
+</li>
+<li><p>height&#x3D;”100”   表格的总高度</p>
+</li>
+<li><p>align&#x3D;”right”   表格整体对齐方式    (参数有  left、center、right)</p>
+</li>
+<li><p>bgcolor&#x3D;”#fff”   表格整体的背景色</p>
+</li>
+</ul>
+<h4 id="③有序列表，无序列表"><a href="#③有序列表，无序列表" class="headerlink" title="③有序列表，无序列表"></a>③有序列表，无序列表</h4><p>ol有序列表，ul无序列表</p>
+<p>li是列表项</p>
+<p>有序列表前面的标识可以通过在ol&#x2F;li标签中加list-style-type&#x2F;type来改变</p>
+<p>标签dl可定义自定义列表，对应ol&#x2F;ul；</p>
+<p>dt对应li，dd作为dt列表项的补充</p>
+<h4 id="④很实用的div标签"><a href="#④很实用的div标签" class="headerlink" title="④很实用的div标签"></a>④很实用的div标签</h4><p>用来划分HTML的结构，从而配合css来控制某一块的的样式</p>
+<p>经常同时配合class和id标签使用（这一部分和css有牵连）</p>
+<h4 id="⑤表单"><a href="#⑤表单" class="headerlink" title="⑤表单"></a>⑤表单</h4><p>​	在HTML中，表单是用户输入数据的主要方式</p>
+<ol>
+<li><p>**<code>&lt;form&gt;</code>**：定义表单的开始和结束。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;form action=&quot;/submit&quot; method=&quot;post&quot;&gt;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>**<code>&lt;input&gt;</code>**：用于接收用户输入。可以通过<code>type</code>属性定义不同类型的输入。</p>
+<ul>
+<li><p>文本框：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;input type=&quot;text&quot; name=&quot;username&quot; placeholder=&quot;用户名&quot;&gt;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>密码框：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;input type=&quot;password&quot; name=&quot;password&quot; placeholder=&quot;密码&quot;&gt;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>单选按钮：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;input type=&quot;radio&quot; name=&quot;gender&quot; value=&quot;female&quot;&gt; 女</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>复选框：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;input type=&quot;checkbox&quot; name=&quot;subscribe&quot; value=&quot;yes&quot;&gt; 订阅</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>文件上传：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;input type=&quot;file&quot; name=&quot;fileUpload&quot;&gt;</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li><p>**<code>&lt;textarea&gt;</code>**：用于多行文本输入。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;textarea name=&quot;message&quot; rows=&quot;4&quot; cols=&quot;50&quot; placeholder=&quot;输入你的消息&quot;&gt;&lt;/textarea&gt;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>**<code>&lt;select&gt;</code>**：下拉选择框。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;select name=&quot;country&quot;&gt;</span><br><span class="line">    &lt;option value=&quot;usa&quot;&gt;美国&lt;/option&gt;</span><br><span class="line">    &lt;option value=&quot;china&quot;&gt;中国&lt;/option&gt;</span><br><span class="line">    &lt;option value=&quot;japan&quot;&gt;日本&lt;/option&gt;</span><br><span class="line">&lt;/select&gt;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>**<code>&lt;button&gt;</code>**：定义按钮。</p>
+<ul>
+<li><p>提交按钮：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;button type=&quot;submit&quot;&gt;提交&lt;/button&gt;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>普通按钮：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;button type=&quot;button&quot; onclick=&quot;alert(&#x27;点击了按钮&#x27;)&quot;&gt;点击我&lt;/button&gt;</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li><p>**<code>&lt;label&gt;</code>**：为表单元素定义标签，增强可访问性。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;label for=&quot;username&quot;&gt;用户名：&lt;/label&gt;</span><br><span class="line">&lt;input type=&quot;text&quot; id=&quot;username&quot; name=&quot;username&quot;&gt;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>**<code>&lt;fieldset&gt;</code>**：用于对表单元素进行分组，通常与<code>&lt;legend&gt;</code>结合使用。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;fieldset&gt;</span><br><span class="line">    &lt;legend&gt;个人信息&lt;/legend&gt;</span><br><span class="line">    &lt;label for=&quot;name&quot;&gt;姓名：&lt;/label&gt;</span><br><span class="line">    &lt;input type=&quot;text&quot; id=&quot;name&quot; name=&quot;name&quot;&gt;</span><br><span class="line">&lt;/fieldset&gt;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>**<code>&lt;legend&gt;</code>**：定义<code>&lt;fieldset&gt;</code>的标题。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;legend&gt;用户注册&lt;/legend&gt;</span><br></pre></td></tr></table></figure></li>
+</ol>
+<h4 id="⑥id与name的区别"><a href="#⑥id与name的区别" class="headerlink" title="⑥id与name的区别"></a>⑥id与name的区别</h4><p>标签属性中的id，是给前端使用的，无论是css样式还是js特效等都会通过标签的id进行操作。<br>而标签属性中的name，都是给后端使用的，一般情况下都是以键值对的方式作为name传到后端。</p>
+<h4 id="⑦框架iframe"><a href="#⑦框架iframe" class="headerlink" title="⑦框架iframe"></a>⑦框架iframe</h4><p>用来实现页面的嵌套</p>
+ <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"> &lt;iframe src=&quot;iframe.html&quot; name=&quot;abc&quot; height=&quot;900&quot; width=&quot;1600&quot;&gt;&lt;/iframe&gt;</span><br><span class="line">&lt;a href=&quot;https://www.yuanshen.com/#/&quot; target=&quot;abc&quot;&gt;&lt;br&gt;&lt;strong&gt;原神，启动！&lt;/strong&gt;&lt;/a&gt; </span><br></pre></td></tr></table></figure>
+
+<p>关键是name和targe的指向</p>
+<p>（也可以直接在iframe的src中写url）</p>
+<p>在iframe.html文件里还可以对未打开的也面写点东西</p>
+<p>无边框：frameborder&#x3D;”0”</p>
+<h5 id="实现响应式放缩"><a href="#实现响应式放缩" class="headerlink" title="实现响应式放缩"></a>实现响应式放缩</h5><h4 id="⑧音频播放"><a href="#⑧音频播放" class="headerlink" title="⑧音频播放"></a>⑧音频播放</h4><p>标签：embed，audio（controls可以加上进度条）</p>
+<p>本来想弄个自动播放音乐的(内联声音)，但是好多浏览器是默认关闭的。</p>
+<h2 id="CSS"><a href="#CSS" class="headerlink" title="CSS"></a>CSS</h2><blockquote>
+<p>(层叠样式表 Cascading Style Sheets)</p>
+</blockquote>
+<h4 id="①CSS语法"><a href="#①CSS语法" class="headerlink" title="①CSS语法"></a>①CSS语法</h4><p>选择器+声明</p>
+<p>每一条声明都要以分号结尾啊啊啊和c语言一样（报错好多次了）</p>
+<h4 id="②id-class选择器，可在html指定css样式"><a href="#②id-class选择器，可在html指定css样式" class="headerlink" title="②id&#x2F;class选择器，可在html指定css样式"></a>②id&#x2F;class选择器，可在html指定css样式</h4><p>无论是class还是id命名的开头都不能用数字命名</p>
+<h4 id="③三种插入样式表的方法"><a href="#③三种插入样式表的方法" class="headerlink" title="③三种插入样式表的方法"></a>③三种插入样式表的方法</h4><p>外部样式表：通过在head内使用link链接到同一目录下的css文件</p>
+ <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;mystyle.css&quot;&gt;</span><br><span class="line">&lt;/head&gt; </span><br></pre></td></tr></table></figure>
+
+<p>内部样式表：作用范围局限于单个文档（利用style标签在html文件中定义）</p>
+<p>内联样式表：在相关的标签内使用style属性</p>
+<p>*从外部，内部到内联，作用的范围越来越小。我感觉就像c语言的函数一样，外部样式表在外部定义可以实现更加简洁的风格，以及方便模块化(就是新建一个css文件把要使用的样式写在里面，在写html文件的时候在开头利用link链接。具体取用只要用id&#x2F;class在标签里面定义就行了)</p>
+<p>试了一下，在外联的css文件里面如果用”.”开头命名，那在html文件里面，要用class引用；如果用”#”开头命名，就要用id引用了</p>
+<p>一般情况下，优先级如下：</p>
+<p>内联样式 &gt; 内部样式&gt;外部样式&gt; 浏览器默认样式</p>
+<h4 id="④css背景"><a href="#④css背景" class="headerlink" title="④css背景"></a>④css背景</h4><p>在开始的style里面定义，可以特别定义具体属性的背景，也可以定义body，让整个背景变换（background-image）</p>
+<p>图像呈现的方式</p>
+<ul>
+<li><p>在水平方向平铺：background-repeat:repeat-x</p>
+</li>
+<li><p>不平铺：background-repeat:no-repeat</p>
+</li>
+<li><p>利用 background-position 属性改变图像在背景中的位置）</p>
+</li>
+</ul>
+<h4 id="⑤css文本"><a href="#⑤css文本" class="headerlink" title="⑤css文本"></a>⑤css文本</h4><ul>
+<li><p>text-align:center 使文本居中</p>
+</li>
+<li><p>text-align:justify;（？？？？？没搞懂）</p>
+</li>
+<li><p>text-indent指定第一行的缩进</p>
+</li>
+<li><p>line-height行高</p>
+</li>
+<li><p>white-space:nowrap禁止换行</p>
+</li>
+</ul>
+<h4 id="⑥css链接交互"><a href="#⑥css链接交互" class="headerlink" title="⑥css链接交互"></a>⑥css链接交互</h4><p>a:link {color:#000000;}      &#x2F;* 未访问链接*&#x2F;<br>a:visited {color:#00FF00;}  &#x2F;* 已访问链接 <em>&#x2F;<br>a:hover {color:#FF00FF;}  &#x2F;</em> 鼠标移动到链接上 <em>&#x2F;<br>a:active {color:#0000FF;}  &#x2F;</em> 鼠标点击时 *&#x2F;</p>
+<h2 id="JS"><a href="#JS" class="headerlink" title="JS"></a>JS</h2><blockquote>
+<p>JavaScript </p>
+</blockquote>
+<p><code>&lt;script&gt;</code> <code>&lt;/script&gt;</code> 这两个标签之间插入Js脚本代码</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">引用外部js文件</span><br><span class="line">&lt;script src=&quot;myScript.js&quot;&gt;&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+
+<h3 id="JavaScript-显示数据"><a href="#JavaScript-显示数据" class="headerlink" title="JavaScript 显示数据"></a>JavaScript 显示数据</h3><ul>
+<li>使用 <strong>window.alert()</strong> 弹出警告框。</li>
+<li>使用 <strong>document.write()</strong> 方法将内容写到 HTML 文档中。</li>
+<li>使用 <strong>innerHTML</strong> 写入到 HTML 元素。</li>
+<li>使用 <strong>console.log()</strong> 写入到浏览器的控制台。</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line"></span><br><span class="line">&lt;h1&gt;我的第一个 Web 页面&lt;/h1&gt;</span><br><span class="line">&lt;p id=&quot;demo&quot;&gt;我的第一个段落&lt;/p&gt;</span><br><span class="line"></span><br><span class="line">&lt;script&gt;</span><br><span class="line">document.getElementById(&quot;demo&quot;).innerHTML = &quot;段落已修改。&quot;;</span><br><span class="line">&lt;/script&gt;</span><br><span class="line"></span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br><span class="line"></span><br><span class="line">document.getElementById(&quot;demo&quot;) ：使用 id 属性来查找 HTML 元素的 JavaScript 代码 </span><br><span class="line"></span><br><span class="line">innerHTML = &quot;段落已修改。&quot; ：用于修改元素的 HTML 内容(innerHTML)的 JavaScript 代码</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&lt;p&gt;我的第一个段落。&lt;/p&gt;</span><br><span class="line"></span><br><span class="line">&lt;button onclick=&quot;myFunction()&quot;&gt;点我&lt;/button&gt;</span><br><span class="line"></span><br><span class="line">&lt;script&gt;</span><br><span class="line">function myFunction() &#123;</span><br><span class="line">    document.write(Date());</span><br><span class="line">&#125;</span><br><span class="line">&lt;/script&gt;</span><br><span class="line"></span><br><span class="line">如果在文档已完成加载后执行 document.write，整个 HTML 页面将被覆盖</span><br></pre></td></tr></table></figure>
+
+<h3 id="JavaScript-变量"><a href="#JavaScript-变量" class="headerlink" title="JavaScript 变量"></a>JavaScript 变量</h3><ul>
+<li><p>JavaScript 使用关键字 <code>var</code> 来定义变量， 使用等号来为变量赋值</p>
+</li>
+<li><p>语句之间用分号隔开,双斜杠之后都是注释，也有属于自己的保留字</p>
+</li>
+<li><p>JavaScript 中，常见的是驼峰法的命名规则，如 lastName (而不是lastname)</p>
+</li>
+<li><p>反斜杠对代码行进行换行</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">document.write(&quot;你好 \</span><br><span class="line">世界!&quot;);</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>JavaScript 是脚本语言，浏览器会在读取代码时，逐行地执行脚本代码。而对于传统编程来说，会在执行前对所有代码进行编译。</p>
+</li>
+<li><p>向变量分配文本值时，应该用双引号或单引号</p>
+<p>向变量赋的值是数值时，不要使用引号</p>
+</li>
+<li><p>Js中没有严格的类型，给变量赋什么类型的值就是什么类型的变量。声明新变量时，也可以使用关键词 “new” 来声明其类型：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> carname=<span class="keyword">new</span> <span class="title class_">String</span>;</span><br><span class="line"><span class="keyword">var</span> x=      <span class="keyword">new</span> <span class="title class_">Number</span>;</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h3 id="JavaScript-对象（oop）"><a href="#JavaScript-对象（oop）" class="headerlink" title="JavaScript 对象（oop）"></a>JavaScript 对象（oop）</h3><blockquote>
+<p>JavaScript 对象是键值对的容器</p>
+</blockquote>
+<p>对象由花括号分隔。在括号内部，对象的属性以名称和<strong>键值对的形式 (name : value) 来定义</strong>。属性由逗号分隔：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> person=&#123;<span class="attr">firstname</span>:<span class="string">&quot;John&quot;</span>, <span class="attr">lastname</span>:<span class="string">&quot;Doe&quot;</span>, <span class="attr">id</span>:<span class="number">5566</span>&#125;;</span><br></pre></td></tr></table></figure>
+
+<p>上面例子中的对象 (person) 有三个属性：firstname、lastname 以及 id。</p>
+<p>空格和折行无所谓。声明可横跨多行：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> person=&#123;</span><br><span class="line">firstname : <span class="string">&quot;John&quot;</span>,</span><br><span class="line">lastname : <span class="string">&quot;Doe&quot;</span>,</span><br><span class="line">id    : <span class="number">5566</span></span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">对象属性有两种寻址方式：</span><br><span class="line">name=person.<span class="property">lastname</span>;</span><br><span class="line">name=person[<span class="string">&quot;lastname&quot;</span>];</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>有点像cpp中的this指针：</p>
+<p><img src="/./../images/%E7%AC%AC%E4%BA%8C%E5%91%A8%EF%BC%9A%E5%89%8D%E7%AB%AF%E4%B8%89%E4%BB%B6%E5%A5%97%E7%9A%84%E5%AD%A6%E4%B9%A0/image-20240922154005990.png" alt="image-20240922154005990"></p>
+<h3 id="JavaScript-函数"><a href="#JavaScript-函数" class="headerlink" title="JavaScript 函数"></a>JavaScript 函数</h3><p>函数就是包裹在花括号中的代码块，前面使用了关键词 function：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">functionname</span>(<span class="params"></span>)</span><br><span class="line">&#123;</span><br><span class="line">    <span class="comment">// 执行代码</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="title class_">JavaScript</span> 对大小写敏感。关键词 <span class="keyword">function</span> 必须是小写的，并且必须以与函数名称相同的大小写来调用函数。</span><br></pre></td></tr></table></figure>
+
+<h3 id="JavaScript-事件"><a href="#JavaScript-事件" class="headerlink" title="JavaScript 事件"></a>JavaScript 事件</h3><p>HTML 事件可以是浏览器行为，也可以是用户行为：</p>
+<ul>
+<li><p>HTML 页面完成加载</p>
+</li>
+<li><p>HTML input 字段改变时</p>
+</li>
+<li><p>HTML 按钮被点击</p>
+<p>示例：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">&lt;!<span class="variable constant_">DOCTYPE</span> html&gt;</span><br><span class="line"><span class="language-xml"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span></span><br><span class="line"><span class="language-xml"><span class="tag">&lt;<span class="name">head</span>&gt;</span> </span></span><br><span class="line"><span class="language-xml"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;utf-8&quot;</span>&gt;</span> </span></span><br><span class="line"><span class="language-xml"><span class="tag">&lt;<span class="name">title</span>&gt;</span>菜鸟教程(runoob.com)<span class="tag">&lt;/<span class="name">title</span>&gt;</span> </span></span><br><span class="line"><span class="language-xml"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span></span><br><span class="line"><span class="language-xml"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span></span><br><span class="line"><span class="language-xml"></span></span><br><span class="line"><span class="language-xml"><span class="tag">&lt;<span class="name">button</span> <span class="attr">onclick</span>=<span class="string">&quot;getElementById(&#x27;demo&#x27;).innerHTML=Date()&quot;</span>&gt;</span>现在的时间是?<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span></span><br><span class="line"><span class="language-xml"><span class="tag">&lt;<span class="name">p</span> <span class="attr">id</span>=<span class="string">&quot;demo&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span></span><br><span class="line"><span class="language-xml"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span></span><br><span class="line"><span class="language-xml"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span></span><br><span class="line"><span class="language-xml"></span></span><br><span class="line"><span class="language-xml">为按钮元素中添加了 onclick 属性，当button被点击时就会在id为demo的文本处打印时间</span></span><br></pre></td></tr></table></figure>
+
+<p><img src="/./../images/%E7%AC%AC%E4%BA%8C%E5%91%A8%EF%BC%9A%E5%89%8D%E7%AB%AF%E4%B8%89%E4%BB%B6%E5%A5%97%E7%9A%84%E5%AD%A6%E4%B9%A0/image-20240922155324913.png" alt="image-20240922155324913"></p>
+</li>
+</ul>
+<h3 id="JavaScript-中的undefined-和-null的区别"><a href="#JavaScript-中的undefined-和-null的区别" class="headerlink" title="JavaScript 中的undefined 和 null的区别"></a>JavaScript 中的undefined 和 null的区别</h3><ul>
+<li><p>undefined 是一个没有设置值的变量，typeof 一个没有值的变量会返回 undefined，undefined表示变量声明过但并未赋过值。</p>
+<p>它是所有未赋值变量默认值</p>
+</li>
+<li><p>设置为 null 来清空对象，设置undefined来清空变量</p>
+</li>
+<li><p>null 和 undefined 的值相等，但类型不等</p>
+</li>
+</ul>
+<h3 id="JavaScript-中的正则表达式"><a href="#JavaScript-中的正则表达式" class="headerlink" title="JavaScript 中的正则表达式"></a>JavaScript 中的正则表达式</h3><p>规则不难，就是有些繁琐，用到了再查就行</p>
+<h3 id="JavaScript和JSON的关系"><a href="#JavaScript和JSON的关系" class="headerlink" title="JavaScript和JSON的关系"></a>JavaScript和JSON的关系</h3><blockquote>
+<p>JSON 是 JS 对象的字符串表示法。它使用文本表示一个 JS 对象的信息,JSON本质上就是一个字符串</p>
+</blockquote>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="title class_">JSON</span>.<span class="title function_">parse</span>()	<span class="comment">//用于将一个 JSON 字符串转换为 JavaScript 对象</span></span><br><span class="line"><span class="title class_">JSON</span>.<span class="title function_">stringify</span>()	<span class="comment">//用于将 JavaScript 值转换为 JSON 字符串</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="JavaScript-异步编程"><a href="#JavaScript-异步编程" class="headerlink" title="JavaScript 异步编程"></a>JavaScript 异步编程</h3><p>异步是与同步相对的概念。同步按代码顺序执行，异步不按照代码顺序执行，异步的执行效率更高，因为主线程发射一个子线程来完成任务，子线程独立于主线程，即使出现阻塞也不会影响主线程的运行。再传统单线程编程中，主线程作为一个线程，不能够同时接受多方面的请求。所以，当一个事件没有结束时，界面将无法处理其他请求。因此我们常常用子线程来完成一些可能消耗时间足够长以至于被用户察觉的事情，比如读取一个大文件或者发出一个网络请求。</p>
+<p>但是子线程有一个局限：一旦发射了以后就会与主线程失去同步，我们无法确定它的结束，如果结束之后需要处理一些事情，比如处理来自服务器的信息，我们是无法将它合并到主线程中去的。</p>
+<p>为了解决这个问题，JavaScript 中的异步操作函数往往通过回调函数来实现异步任务的结果处理。回调函数就是一个函数，它是在我们启动一个异步任务的时候就告诉它：等你完成了这个任务之后要干什么。这样一来主线程几乎不用关心异步任务的状态了，他自己会善始善终。</p>
+<h3 id="JavaScript-HTML-DOM"><a href="#JavaScript-HTML-DOM" class="headerlink" title="JavaScript HTML DOM"></a>JavaScript HTML DOM</h3><p>当网页被加载时，浏览器会创建页面的文档对象模型（Document Object Model），HTML DOM 模型被构造为<strong>对象</strong>的树。通过可编程的对象模型，这时JavaScript 能够改变页面中的所有HTML 元素，HTML 属性，CSS 样式，对页面中的所有事件做出反应</p>
+<p><img src="/./../images/%E7%AC%AC%E4%BA%8C%E5%91%A8%EF%BC%9A%E5%89%8D%E7%AB%AF%E4%B8%89%E4%BB%B6%E5%A5%97%E7%9A%84%E5%AD%A6%E4%B9%A0/image-20240922163259667.png" alt="HTML DOM树"></p>
+<h4 id="查找HTML元素"><a href="#查找HTML元素" class="headerlink" title="查找HTML元素"></a>查找HTML元素</h4><p>欲通过Js来改变以上所列一系列的东西，首先要找到HTML元素，有三种方法：</p>
+<ul>
+<li><p>通过 id 找到 HTML 元素</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> x=<span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&quot;intro&quot;</span>);</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>通过标签名（TagName）找到 HTML 元素</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> x=<span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&quot;main&quot;</span>);</span><br><span class="line"><span class="comment">//查找 id=&quot;main&quot; 的元素</span></span><br><span class="line"><span class="keyword">var</span> y=x.<span class="title function_">getElementsByTagName</span>(<span class="string">&quot;p&quot;</span>);</span><br><span class="line"><span class="comment">//查找 id=&quot;main&quot; 元素中的所有 &lt;p&gt; 元素</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>通过类名找到 HTML 元素</p>
+</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> x=<span class="variable language_">document</span>.<span class="title function_">getElementsByClassName</span>(<span class="string">&quot;intro&quot;</span>);</span><br><span class="line"><span class="comment">//通过 getElementsByClassName 函数来查找 class=&quot;intro&quot; 的元素</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="改变HTML的语法："><a href="#改变HTML的语法：" class="headerlink" title="改变HTML的语法："></a>改变HTML的语法：</h4><ul>
+<li><p>改变 HTML 的内容：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable language_">document</span>.<span class="title function_">getElementById</span>(id).<span class="property">innerHTML</span>=新的 <span class="variable constant_">HTML</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>改变 HTML 的属性：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable language_">document</span>.<span class="title function_">getElementById</span>(id).<span class="property">attribute</span>=新属性值</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h4 id="用-HTML-DOM-来分配事件"><a href="#用-HTML-DOM-来分配事件" class="headerlink" title="用 HTML DOM 来分配事件"></a>用 HTML DOM 来分配事件</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">向 button 元素分配 onclick 事件：</span><br><span class="line"></span><br><span class="line">&lt;script&gt;</span><br><span class="line">document.getElementById(&quot;myBtn&quot;).onclick=function()&#123;displayDate()&#125;;</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+
+<h3 id="JavaScript-HTML-DOM-EventListener"><a href="#JavaScript-HTML-DOM-EventListener" class="headerlink" title="JavaScript HTML DOM EventListener"></a>JavaScript HTML DOM EventListener</h3><blockquote>
+<p>即事件监听</p>
+</blockquote>
+<p><img src="/./../images/%E7%AC%AC%E4%BA%8C%E5%91%A8%EF%BC%9A%E5%89%8D%E7%AB%AF%E4%B8%89%E4%BB%B6%E5%A5%97%E7%9A%84%E5%AD%A6%E4%B9%A0/image-20240922165416734.png" alt="image-20240922165416734"></p>
+<p>向id为myBtn的标签添加事件click，即addEventListener() 方法用于向指定元素添加事件句柄。用 addEventListener() 方法时, JavaScript 从 HTML 标记中分离开来，可读性更强， 在没有控制HTML标记时也可以添加事件监听。</p>
+<h4 id="语法："><a href="#语法：" class="headerlink" title="语法："></a>语法：</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">element.<span class="title function_">addEventListener</span>(event, <span class="keyword">function</span>, useCapture);</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p>第一个参数是事件的类型 (如 “click” 或 “mousedown”).</p>
+</li>
+<li><p>第二个参数是事件触发后调用的函数。</p>
+</li>
+<li><p>第三个参数是个布尔值用于描述事件是冒泡还是捕获。该参数是可选的。</p>
+<p>对于<strong>冒泡</strong>和<strong>捕获</strong>的描述：</p>
+<p>事件传递有两种方式：冒泡与捕获。</p>
+<p>事件传递定义了元素事件触发的顺序。 如果你将 <code>&lt;p&gt;</code> 元素插入到 <code>&lt;div&gt; </code>元素中，用户点击 <code>&lt;p&gt; </code>元素, 哪个元素的 “click” 事件先被触发呢？</p>
+<p>在 <em>冒泡</em> 中，内部元素的事件会先被触发，然后再触发外部元素，即： <code>&lt;p&gt; </code>元素的点击事件先触发，然后会触发 <code>&lt;div&gt; </code>元素的点击事件。</p>
+<p>在 <em>捕获</em> 中，外部元素的事件会先被触发，然后才会触发内部元素的事件，即： <code>&lt;div&gt;</code> 元素的点击事件先触发 ，然后再触发 <code>&lt;p&gt;</code> 元素的点击事件。</p>
+<p>addEventListener() 方法中的 “useCapture” 参数就是用来指定传递类型的，useCapture的默认值为 false, 即冒泡传递，当值为 true 时, 事件使用捕获传递。</p>
+</li>
+</ul>
+<h3 id="Js对HTML-元素的创建，移除，替换"><a href="#Js对HTML-元素的创建，移除，替换" class="headerlink" title="Js对HTML 元素的创建，移除，替换"></a>Js对HTML 元素的创建，移除，替换</h3><ul>
+<li><p>创建</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">&lt;div id=&quot;div1&quot;&gt;</span><br><span class="line">&lt;p id=&quot;p1&quot;&gt;这是一个段落。&lt;/p&gt;</span><br><span class="line">&lt;p id=&quot;p2&quot;&gt;这是另外一个段落。&lt;/p&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line"></span><br><span class="line">var para = document.createElement(&quot;p&quot;);</span><br><span class="line">//创建一个新的&lt;p&gt;元素</span><br><span class="line"></span><br><span class="line">var node = document.createTextNode(&quot;这是一个新的段落。&quot;);//为 &lt;p&gt; 元素创建一个新的文本节点：</span><br><span class="line"></span><br><span class="line">para.appendChild(node);//将文本节点添加到 &lt;p&gt; 元素中</span><br><span class="line"> </span><br><span class="line">var element = document.getElementById(&quot;div1&quot;);</span><br><span class="line">//查找一个id已知的元素，将这个元素赋给element</span><br><span class="line">element.appendChild(para);</span><br><span class="line">//把这个&lt;p&gt;元素插到这个id为div1的元素里</span><br></pre></td></tr></table></figure>
+
+<p>以上我们使用了<strong>appendChild()</strong> 方法，它用于添加新元素到尾部，如果我们需要将新元素添加到开始位置，可以使用 <strong>insertBefore()</strong> 方法</p>
+</li>
+<li><p>移除</p>
+<blockquote>
+<p>要移除一个元素你需要知道该元素的父元素</p>
+</blockquote>
+</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">&lt;div id=<span class="string">&quot;div1&quot;</span>&gt;</span><br><span class="line"><span class="language-xml"><span class="tag">&lt;<span class="name">p</span> <span class="attr">id</span>=<span class="string">&quot;p1&quot;</span>&gt;</span>这是一个段落。<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span></span><br><span class="line"><span class="language-xml"><span class="tag">&lt;<span class="name">p</span> <span class="attr">id</span>=<span class="string">&quot;p2&quot;</span>&gt;</span>这是另外一个段落。<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span></span><br><span class="line">&lt;/div&gt;</span><br><span class="line"> </span><br><span class="line"><span class="language-xml"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="language-javascript"></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml"><span class="keyword">var</span> parent = <span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&quot;div1&quot;</span>);</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml"><span class="comment">//查找id为div1的父元素</span></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml"><span class="keyword">var</span> child = <span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&quot;p1&quot;</span>);</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml"><span class="comment">//查找id为p1的子元素</span></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">parent.<span class="title function_">removeChild</span>(child);</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml"><span class="comment">//对父元素下的child运行removeChild函数</span></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p>替换</p>
+<p>replaceChlid()</p>
+</li>
+</ul>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://flora-is-coming.github.io">Flora</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://flora-is-coming.github.io/2024/09/22/%E7%AC%AC%E4%BA%8C%E5%91%A8%E5%AD%A6%E4%B9%A0%E5%86%85%E5%AE%B9/">https://flora-is-coming.github.io/2024/09/22/%E7%AC%AC%E4%BA%8C%E5%91%A8%E5%AD%A6%E4%B9%A0%E5%86%85%E5%AE%B9/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://flora-is-coming.github.io" target="_blank">Flora</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"></div><div class="post_share"><div class="social-share" data-image="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2024/09/23/%E4%B8%80%E6%AE%B5%E7%AE%80%E5%8D%95%E7%9A%84Js%E4%BB%A3%E7%A0%81/" title="一段简单的Js代码"><div class="cover" style="background: var(--default-bg-color)"></div><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">一段简单的Js代码</div></div></a></div><div class="next-post pull-right"><a href="/2024/09/21/%E7%AC%AC%E4%B8%80%E5%91%A8%E5%AD%A6%E4%B9%A0%E5%86%85%E5%AE%B9/" title="第一周：BurpSuite、Linux常见命令、http"><div class="cover" style="background: var(--default-bg-color)"></div><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">第一周：BurpSuite、Linux常见命令、http</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">Flora</div><div class="author-info__description">怕见山南山北子规啼</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">7</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#HTML"><span class="toc-number">1.</span> <span class="toc-text">HTML</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E2%91%A0%E5%88%A9%E7%94%A8map%E5%88%9B%E5%BB%BA%E5%9B%BE%E5%83%8F%E6%98%A0%E5%B0%84%EF%BC%9A"><span class="toc-number">1.0.1.</span> <span class="toc-text">①利用map创建图像映射：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E2%91%A1%E5%88%A9%E7%94%A8table%E5%88%9B%E5%BB%BA%E8%A1%A8%E6%A0%BC%EF%BC%9A"><span class="toc-number">1.0.2.</span> <span class="toc-text">②利用table创建表格：</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#table%E6%A0%87%E7%AD%BE%E5%B8%B8%E7%94%A8%E5%B1%9E%E6%80%A7%EF%BC%9A"><span class="toc-number">1.0.2.1.</span> <span class="toc-text">table标签常用属性：</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E2%91%A2%E6%9C%89%E5%BA%8F%E5%88%97%E8%A1%A8%EF%BC%8C%E6%97%A0%E5%BA%8F%E5%88%97%E8%A1%A8"><span class="toc-number">1.0.3.</span> <span class="toc-text">③有序列表，无序列表</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E2%91%A3%E5%BE%88%E5%AE%9E%E7%94%A8%E7%9A%84div%E6%A0%87%E7%AD%BE"><span class="toc-number">1.0.4.</span> <span class="toc-text">④很实用的div标签</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E2%91%A4%E8%A1%A8%E5%8D%95"><span class="toc-number">1.0.5.</span> <span class="toc-text">⑤表单</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E2%91%A5id%E4%B8%8Ename%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="toc-number">1.0.6.</span> <span class="toc-text">⑥id与name的区别</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E2%91%A6%E6%A1%86%E6%9E%B6iframe"><span class="toc-number">1.0.7.</span> <span class="toc-text">⑦框架iframe</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%AE%9E%E7%8E%B0%E5%93%8D%E5%BA%94%E5%BC%8F%E6%94%BE%E7%BC%A9"><span class="toc-number">1.0.7.1.</span> <span class="toc-text">实现响应式放缩</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E2%91%A7%E9%9F%B3%E9%A2%91%E6%92%AD%E6%94%BE"><span class="toc-number">1.0.8.</span> <span class="toc-text">⑧音频播放</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#CSS"><span class="toc-number">2.</span> <span class="toc-text">CSS</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E2%91%A0CSS%E8%AF%AD%E6%B3%95"><span class="toc-number">2.0.1.</span> <span class="toc-text">①CSS语法</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E2%91%A1id-class%E9%80%89%E6%8B%A9%E5%99%A8%EF%BC%8C%E5%8F%AF%E5%9C%A8html%E6%8C%87%E5%AE%9Acss%E6%A0%B7%E5%BC%8F"><span class="toc-number">2.0.2.</span> <span class="toc-text">②id&#x2F;class选择器，可在html指定css样式</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E2%91%A2%E4%B8%89%E7%A7%8D%E6%8F%92%E5%85%A5%E6%A0%B7%E5%BC%8F%E8%A1%A8%E7%9A%84%E6%96%B9%E6%B3%95"><span class="toc-number">2.0.3.</span> <span class="toc-text">③三种插入样式表的方法</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E2%91%A3css%E8%83%8C%E6%99%AF"><span class="toc-number">2.0.4.</span> <span class="toc-text">④css背景</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E2%91%A4css%E6%96%87%E6%9C%AC"><span class="toc-number">2.0.5.</span> <span class="toc-text">⑤css文本</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E2%91%A5css%E9%93%BE%E6%8E%A5%E4%BA%A4%E4%BA%92"><span class="toc-number">2.0.6.</span> <span class="toc-text">⑥css链接交互</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#JS"><span class="toc-number">3.</span> <span class="toc-text">JS</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#JavaScript-%E6%98%BE%E7%A4%BA%E6%95%B0%E6%8D%AE"><span class="toc-number">3.1.</span> <span class="toc-text">JavaScript 显示数据</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#JavaScript-%E5%8F%98%E9%87%8F"><span class="toc-number">3.2.</span> <span class="toc-text">JavaScript 变量</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#JavaScript-%E5%AF%B9%E8%B1%A1%EF%BC%88oop%EF%BC%89"><span class="toc-number">3.3.</span> <span class="toc-text">JavaScript 对象（oop）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#JavaScript-%E5%87%BD%E6%95%B0"><span class="toc-number">3.4.</span> <span class="toc-text">JavaScript 函数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#JavaScript-%E4%BA%8B%E4%BB%B6"><span class="toc-number">3.5.</span> <span class="toc-text">JavaScript 事件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#JavaScript-%E4%B8%AD%E7%9A%84undefined-%E5%92%8C-null%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="toc-number">3.6.</span> <span class="toc-text">JavaScript 中的undefined 和 null的区别</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#JavaScript-%E4%B8%AD%E7%9A%84%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F"><span class="toc-number">3.7.</span> <span class="toc-text">JavaScript 中的正则表达式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#JavaScript%E5%92%8CJSON%E7%9A%84%E5%85%B3%E7%B3%BB"><span class="toc-number">3.8.</span> <span class="toc-text">JavaScript和JSON的关系</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#JavaScript-%E5%BC%82%E6%AD%A5%E7%BC%96%E7%A8%8B"><span class="toc-number">3.9.</span> <span class="toc-text">JavaScript 异步编程</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#JavaScript-HTML-DOM"><span class="toc-number">3.10.</span> <span class="toc-text">JavaScript HTML DOM</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%9F%A5%E6%89%BEHTML%E5%85%83%E7%B4%A0"><span class="toc-number">3.10.1.</span> <span class="toc-text">查找HTML元素</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%94%B9%E5%8F%98HTML%E7%9A%84%E8%AF%AD%E6%B3%95%EF%BC%9A"><span class="toc-number">3.10.2.</span> <span class="toc-text">改变HTML的语法：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%94%A8-HTML-DOM-%E6%9D%A5%E5%88%86%E9%85%8D%E4%BA%8B%E4%BB%B6"><span class="toc-number">3.10.3.</span> <span class="toc-text">用 HTML DOM 来分配事件</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#JavaScript-HTML-DOM-EventListener"><span class="toc-number">3.11.</span> <span class="toc-text">JavaScript HTML DOM EventListener</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%AF%AD%E6%B3%95%EF%BC%9A"><span class="toc-number">3.11.1.</span> <span class="toc-text">语法：</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Js%E5%AF%B9HTML-%E5%85%83%E7%B4%A0%E7%9A%84%E5%88%9B%E5%BB%BA%EF%BC%8C%E7%A7%BB%E9%99%A4%EF%BC%8C%E6%9B%BF%E6%8D%A2"><span class="toc-number">3.12.</span> <span class="toc-text">Js对HTML 元素的创建，移除，替换</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/09/28/%E7%AC%AC%E5%9B%9B%E5%91%A8%E5%AD%A6%E4%B9%A0%E5%86%85%E5%AE%B9/" title="第四周：PHP">第四周：PHP</a><time datetime="2024-09-28T11:57:20.000Z" title="发表于 2024-09-28 19:57:20">2024-09-28</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/09/24/%E7%AC%AC%E4%B8%89%E5%91%A8%E5%AD%A6%E4%B9%A0%E5%86%85%E5%AE%B9/" title="第三周：MySQL">第三周：MySQL</a><time datetime="2024-09-24T11:53:33.000Z" title="发表于 2024-09-24 19:53:33">2024-09-24</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/09/23/%E4%B8%80%E6%AE%B5%E7%AE%80%E5%8D%95%E7%9A%84Js%E4%BB%A3%E7%A0%81/" title="一段简单的Js代码">一段简单的Js代码</a><time datetime="2024-09-23T07:20:33.000Z" title="发表于 2024-09-23 15:20:33">2024-09-23</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/09/22/%E7%AC%AC%E4%BA%8C%E5%91%A8%E5%AD%A6%E4%B9%A0%E5%86%85%E5%AE%B9/" title="第二周：HTML、CSS、JS">第二周：HTML、CSS、JS</a><time datetime="2024-09-22T01:07:14.000Z" title="发表于 2024-09-22 09:07:14">2024-09-22</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/09/21/%E7%AC%AC%E4%B8%80%E5%91%A8%E5%AD%A6%E4%B9%A0%E5%86%85%E5%AE%B9/" title="第一周：BurpSuite、Linux常见命令、http">第一周：BurpSuite、Linux常见命令、http</a><time datetime="2024-09-21T11:27:56.000Z" title="发表于 2024-09-21 19:27:56">2024-09-21</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2024 By Flora</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=4.13.0"></script><script src="/js/main.js?v=4.13.0"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.33/dist/fancybox/fancybox.umd.min.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
